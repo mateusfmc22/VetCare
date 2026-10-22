@@ -1,0 +1,282 @@
+
+.tarefas-modulo {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.tarefas-resumo {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tarefas-resumo-card {
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tarefas-resumo-card span {
+  font-size: 13px;
+  color: var(--cinza);
+}
+
+.tarefas-resumo-card strong {
+  font-size: 30px;
+  color: var(--principal);
+}
+
+.tarefas-painel {
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.tarefas-painel h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.tarefas-painel p {
+  color: var(--cinza);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.tarefas-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.tarefas-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.tarefas-campo label {
+  color: var(--texto);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tarefas-campo input,
+.tarefas-campo select,
+.tarefas-campo textarea,
+.tarefas-filtros input,
+.tarefas-filtros select {
+  width: 100%;
+  border: 1px solid var(--borda);
+  border-radius: 9px;
+  padding: 12px;
+  background: white;
+  color: var(--texto);
+  font-size: 14px;
+  outline: none;
+}
+
+.tarefas-campo input:focus,
+.tarefas-campo select:focus,
+.tarefas-campo textarea:focus,
+.tarefas-filtros input:focus,
+.tarefas-filtros select:focus {
+  border-color: var(--principal);
+}
+
+.tarefas-campo-largo {
+  grid-column: 1 / -1;
+}
+
+.tarefas-botao-principal {
+  grid-column: 1 / -1;
+  justify-self: start;
+  background: var(--principal);
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 13px 20px;
+  font-weight: 600;
+}
+
+.tarefas-botao-principal:hover {
+  background: var(--principal-escuro);
+}
+
+/* FILTROS E LISTA */
+
+.tarefas-lista-topo {
+  margin-bottom: 22px;
+}
+
+.tarefas-filtros {
+  display: grid;
+  grid-template-columns: 1fr 210px;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.tarefas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tarefa-item {
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 22px;
+  min-width: 0;
+}
+
+.tarefa-item-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.tarefa-item-topo h3 {
+  font-size: 17px;
+  margin-bottom: 6px;
+  overflow-wrap: anywhere;
+}
+
+.tarefa-item-topo small {
+  color: var(--cinza);
+  font-size: 11px;
+}
+
+.tarefa-descricao {
+  margin-bottom: 20px;
+  overflow-wrap: anywhere;
+}
+
+.tarefas-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.tarefas-alta {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.tarefas-media {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.tarefas-baixa {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.tarefa-controles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.tarefa-vinculo {
+  padding: 14px;
+  background: var(--verde-claro);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--principal-escuro);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.tarefa-vinculo button {
+  background: none;
+  border: none;
+  color: var(--principal-escuro);
+  font-weight: 700;
+}
+
+.tarefa-vinculo button:hover {
+  text-decoration: underline;
+}
+
+.tarefa-excluir {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  color: #b91c1c;
+  background: transparent;
+}
+
+.tarefa-excluir:hover {
+  background: #fef2f2;
+}
+
+.tarefas-vazio {
+  padding: 40px 20px;
+  text-align: center;
+  background: var(--fundo);
+  border-radius: 12px;
+}
+
+.tarefas-vazio h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1100px) {
+  .tarefas-resumo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tarefa-controles {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .tarefas-painel {
+    padding: 18px;
+  }
+
+  .tarefas-form,
+  .tarefas-filtros {
+    grid-template-columns: 1fr;
+  }
+
+  .tarefas-campo-largo,
+  .tarefas-botao-principal {
+    grid-column: auto;
+  }
+
+  .tarefas-botao-principal {
+    width: 100%;
+  }
+
+  .tarefas-resumo-card {
+    padding: 15px;
+  }
+
+  .tarefa-item {
+    padding: 16px;
+  }
+}
