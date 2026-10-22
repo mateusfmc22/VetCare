@@ -1,10 +1,20 @@
+import Financeiro from "./pages/Financeiro";
+import Produtos from "./pages/Produtos";
+import Orcamentos from "./pages/Orcamentos";
 import Checklists from "./pages/Checklists";
 import { useState } from "react";
 import "./App.css";
 import Chamados from "./pages/Chamados";
 import Tarefas from "./pages/Tarefas";
 
-type Pagina = "inicio" | "chamados" | "tarefas" | "checklists";
+type Pagina =
+  | "inicio"
+  | "chamados"
+  | "tarefas"
+  | "checklists"
+  | "orcamentos"
+  | "produtos"
+  | "financeiro";
 
 function App() {
   const [pagina, setPagina] = useState<Pagina>("inicio");
@@ -50,6 +60,26 @@ function App() {
           >
             ▤ Checklists
           </button>
+          <button
+            className={pagina === "orcamentos" ? "ativo" : ""}
+            onClick={() => setPagina("orcamentos")}
+          >
+            ◈ Orçamentos
+          </button>
+
+          <button
+            className={pagina === "produtos" ? "ativo" : ""}
+            onClick={() => setPagina("produtos")}
+          >
+            ▦ Produtos
+          </button>
+
+          <button
+            className={pagina === "financeiro" ? "ativo" : ""}
+            onClick={() => setPagina("financeiro")}
+          >
+            $ Financeiro
+          </button>
         </nav>
 
         <div className="sidebar-rodape">
@@ -67,6 +97,9 @@ function App() {
               {pagina === "chamados" && "Central de Chamados"}
               {pagina === "tarefas" && "Controle de Tarefas"}
               {pagina === "checklists" && "Checklists de Qualidade"}
+              {pagina === "orcamentos" && "Emissor de Orçamentos"}
+              {pagina === "produtos" && "Gerenciamento de Produtos"}
+              {pagina === "financeiro" && "Controle Financeiro"}
             </h1>
           </div>
 
@@ -126,7 +159,14 @@ function App() {
         )}
 
         {pagina === "checklists" && <Checklists />}
+
+        {pagina === "orcamentos" && <Orcamentos />}
         
+        {pagina === "produtos" && <Produtos />}
+
+        {pagina === "financeiro" && (
+          <Financeiro key={pagina} />
+        )}
       </main>
     </div>
   );
