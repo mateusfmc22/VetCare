@@ -615,3 +615,352 @@
 .botao-gerar-tarefa:hover {
   background: #c6eadd;
 }
+
+
+/* Orçamentos - VetCare */
+
+.orc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.orc-form input,
+.orc-form select,
+.orc-cadastrado select {
+  padding: 12px;
+  border: 1px solid #dce5e8;
+  border-radius: 8px;
+  font-size: 15px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.orc-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.orc-linha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.orc-linha select {
+  flex: 2;
+  min-width: 200px;
+}
+
+.orc-linha input {
+  width: 90px;
+}
+
+.orc-form button,
+.orc-cadastrado button {
+  background: #168575;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 6px 0;
+}
+
+.orc-form button:hover,
+.orc-cadastrado button:hover {
+  background: #126c60;
+}
+
+.orc-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.orc-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e0e7eb;
+  border-radius: 8px;
+}
+
+.orc-cadastrado {
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e7eb;
+}
+
+.orc-cadastrado progress {
+  accent-color: #168575;
+  margin: 10px 0;
+}
+
+@media (max-width: 700px) {
+  .orc-linha {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .orc-linha input,
+  .orc-linha select {
+    width: 100%;
+  }
+}
+
+
+/* FORMULÁRIO DE ORÇAMENTOS */
+
+.orc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.orc-form > input,
+.orc-form > label input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dce5e8;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.orc-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.orc-linha {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.orc-linha select {
+  flex: 2;
+  min-width: 200px;
+}
+
+.orc-linha input {
+  width: 90px;
+}
+
+.orc-form button,
+.orc-cadastrado button {
+  background: #168575;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.orc-form button:hover,
+.orc-cadastrado button:hover {
+  background: #126c60;
+}
+
+.orc-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.orc-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e0e7eb;
+  border-radius: 8px;
+}
+
+.orc-cadastrado {
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e7eb;
+}
+
+@media (max-width: 700px) {
+  .orc-linha {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .orc-linha input,
+  .orc-linha select {
+    width: 100%;
+  }
+}
+
+
+/* FORMULÁRIOS DE PRODUTOS E FINANCEIRO */
+
+.conteudo .card > form:not(.orc-form) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.conteudo .card > form:not(.orc-form) input,
+.conteudo .card > form:not(.orc-form) select {
+  flex: 1 1 190px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #dce5e8;
+  border-radius: 8px;
+  background: white;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.conteudo .card > form:not(.orc-form) button {
+  background: #168575;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.conteudo .card > form:not(.orc-form) button:hover {
+  background: #126c60;
+}
+
+.conteudo .card > input,
+.conteudo .card > select {
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #dce5e8;
+  border-radius: 8px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.conteudo .card > div > button {
+  background: #168575;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.conteudo .card > div > button:hover {
+  background: #126c60;
+}
+
+.conteudo .card hr {
+  border: none;
+  border-top: 1px solid #e0e7eb;
+  margin: 20px 0;
+}
+
+@media (max-width: 700px) {
+  .conteudo .card > form:not(.orc-form) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+
+/* VETCARE - REGRA DE CORES 60-30-10 */
+
+:root {
+  --cor-dominante: #f4f8f7;
+  --cor-secundaria: #ffffff;
+  --cor-destaque: #168575;
+  --cor-destaque-hover: #126c60;
+  --cor-texto: #152b41;
+  --cor-texto-suave: #617386;
+  --cor-borda: #dce5e8;
+}
+
+/* 60% - Fundo principal */
+body,
+.app,
+.conteudo {
+  background-color: var(--cor-dominante);
+}
+
+/* 30% - Superfícies */
+.sidebar,
+.card {
+  background-color: var(--cor-secundaria);
+}
+
+/* 10% - Ações e destaques */
+.menu button.ativo,
+.orc-form button:not(:disabled),
+.orc-cadastrado button,
+.conteudo .card > form:not(.orc-form) button,
+.conteudo .card > div > button {
+  background-color: var(--cor-destaque);
+  color: #ffffff;
+}
+
+.orc-form button:not(:disabled):hover,
+.orc-cadastrado button:hover,
+.conteudo .card > form:not(.orc-form) button:hover,
+.conteudo .card > div > button:hover {
+  background-color: var(--cor-destaque-hover);
+}
+
+/* Tipografia e bordas */
+.conteudo h1,
+.conteudo h2,
+.conteudo h3,
+.conteudo h4 {
+  color: var(--cor-texto);
+}
+
+.card {
+  border: 1px solid var(--cor-borda);
+}
+
+
+/* VENDA DE PRODUTOS */
+
+.produto-venda {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  padding: 16px;
+  margin: 18px 0;
+  background: #f4f8f7;
+  border: 1px solid #dce5e8;
+  border-radius: 10px;
+}
+
+.produto-venda label {
+  font-weight: 600;
+  color: #152b41;
+}
+
+.produto-venda input {
+  padding: 12px;
+  border: 1px solid #dce5e8;
+  border-radius: 8px;
+  background: white;
+}
+
+.produto-venda p {
+  margin: 0;
+  color: #152b41;
+}
