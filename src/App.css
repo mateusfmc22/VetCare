@@ -1307,3 +1307,513 @@ body,
     flex-direction: column;
   }
 }
+
+/* ===================================
+   VETCARE - PÁGINA INICIAL
+   IDENTIDADE VISUAL 60-30-10
+=================================== */
+
+.inicio-vetcare {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  animation: inicioFade 0.5s ease;
+}
+
+@keyframes inicioFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* BANNER PRINCIPAL */
+
+.inicio-hero {
+  background: linear-gradient(
+    135deg,
+    #126c60 0%,
+    #168575 65%,
+    #1c9b85 100%
+  );
+
+  border-radius: 20px;
+  padding: 55px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.inicio-hero-conteudo {
+  position: relative;
+  z-index: 2;
+  max-width: 630px;
+}
+
+.inicio-etiqueta {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 9px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.inicio-hero h2 {
+  font-size: clamp(30px, 3.5vw, 47px);
+  line-height: 1.15;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.inicio-hero p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.91);
+  max-width: 560px;
+}
+
+.inicio-hero-detalhes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.inicio-hero-detalhes span {
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.14);
+  padding: 9px 13px;
+  border-radius: 8px;
+  color: white;
+}
+
+.inicio-hero-simbolo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 220px;
+}
+
+.inicio-circulo {
+  width: 185px;
+  height: 185px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 25px rgba(255, 255, 255, 0.05);
+}
+
+.inicio-circulo span {
+  font-size: 85px;
+}
+
+/* APRESENTAÇÃO */
+
+.inicio-sobre {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 45px;
+  padding: 15px 5px;
+}
+
+.inicio-subtitulo {
+  color: #168575;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.inicio-sobre h2,
+.inicio-secao h2 {
+  font-size: clamp(25px, 3vw, 32px);
+  color: #152b41;
+  margin: 12px 0 20px;
+  letter-spacing: -0.5px;
+}
+
+.inicio-sobre p {
+  color: #617386;
+  line-height: 1.9;
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.inicio-sobre-destaque {
+  background: white;
+  border: 1px solid #dce5e8;
+  border-radius: 18px;
+  padding: 35px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(21, 43, 65, 0.04);
+}
+
+.inicio-sobre-destaque > span {
+  font-size: 66px;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.inicio-sobre-destaque h3 {
+  color: #168575;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.inicio-sobre-destaque p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* DIFERENCIAIS */
+
+.inicio-secao {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.inicio-diferenciais {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.inicio-diferencial {
+  background: white;
+  border: 1px solid #dce5e8;
+  border-radius: 16px;
+  padding: 30px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inicio-diferencial:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(21, 43, 65, 0.08);
+}
+
+.inicio-diferencial-icone {
+  width: 52px;
+  height: 52px;
+  background: #e0f3ed;
+  color: #168575;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.inicio-diferencial h3 {
+  color: #152b41;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.inicio-diferencial p {
+  color: #617386;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* MISSÃO, VISÃO E VALORES */
+
+.inicio-valores {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: #dce5e8;
+  border: 1px solid #dce5e8;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.inicio-valor {
+  background: white;
+  padding: 35px 28px;
+}
+
+.inicio-valor > span {
+  color: #168575;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.inicio-valor h3 {
+  margin: 15px 0 12px;
+  font-size: 20px;
+  color: #152b41;
+}
+
+.inicio-valor p {
+  color: #617386;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* RODAPÉ */
+
+.inicio-rodape {
+  text-align: center;
+  padding: 35px 15px;
+  border-top: 1px solid #dce5e8;
+  margin-top: 5px;
+}
+
+.inicio-rodape span {
+  font-size: 23px;
+  font-weight: 800;
+  color: #168575;
+}
+
+.inicio-rodape p {
+  color: #617386;
+  margin: 10px 0;
+}
+
+.inicio-rodape small {
+  color: #82919f;
+  font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1100px) {
+  .inicio-hero {
+    padding: 40px 32px;
+  }
+
+  .inicio-hero-simbolo {
+    width: 150px;
+  }
+
+  .inicio-circulo {
+    width: 125px;
+    height: 125px;
+  }
+
+  .inicio-circulo span {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .inicio-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inicio-hero-simbolo {
+    display: none;
+  }
+
+  .inicio-sobre {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .inicio-diferenciais,
+  .inicio-valores {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .inicio-hero {
+    padding: 32px 22px;
+    border-radius: 14px;
+  }
+
+  .inicio-hero h2 {
+    font-size: 30px;
+  }
+
+  .inicio-diferencial,
+  .inicio-valor {
+    padding: 24px;
+  }
+
+  .inicio-vetcare {
+    gap: 30px;
+  }
+}
+
+/* =========================================
+   VETCARE - NAVEGAÇÃO INDEPENDENTE
+   MENU LATERAL FIXO + CONTEÚDO ROLÁVEL
+========================================= */
+
+/* Impede que a página inteira role */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* Estrutura principal do aplicativo */
+.app {
+  display: flex;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Barra lateral fixa na esquerda */
+.sidebar {
+  position: relative;
+  flex: 0 0 260px;
+  width: 260px;
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  border-right: 1px solid #dce5e8;
+  overflow: hidden;
+}
+
+/* Rolagem exclusiva da lista de módulos */
+.sidebar .menu {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  padding: 10px 12px 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #b5d8ce transparent;
+}
+
+/* Cor verde nos nomes dos módulos */
+.sidebar .menu button {
+  color: #168575;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 14px;
+
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+.sidebar .menu button:hover:not(.ativo) {
+  background: #e0f3ed;
+  color: #126c60;
+}
+
+/* Módulo selecionado: verde com texto branco */
+.sidebar .menu button.ativo,
+.sidebar .menu button.ativo:hover {
+  background: #168575;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Acessibilidade: navegação por teclado */
+.sidebar .menu button:focus-visible {
+  outline: 3px solid #86caba;
+  outline-offset: 2px;
+}
+
+/* Logo permanece visível */
+.sidebar .logo,
+.sidebar .menu-titulo,
+.sidebar .sidebar-rodape {
+  flex-shrink: 0;
+}
+
+/* Área principal rola independentemente */
+.conteudo {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: #f4f8f7;
+  scrollbar-width: thin;
+  scrollbar-color: #b5d8ce transparent;
+}
+
+/* Rolagem suave quando necessário */
+.sidebar .menu,
+.conteudo {
+  overscroll-behavior: contain;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+  .sidebar {
+    flex-basis: 210px;
+    width: 210px;
+  }
+
+  .sidebar .menu button {
+    font-size: 12px;
+    padding: 11px 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .sidebar {
+    flex-basis: 155px;
+    width: 155px;
+  }
+
+  .sidebar .menu {
+    padding: 8px 6px;
+  }
+
+  .sidebar .menu button {
+    font-size: 11px;
+    padding: 10px 7px;
+    overflow-wrap: anywhere;
+  }
+}
