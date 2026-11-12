@@ -1,3 +1,6 @@
+import Satisfacao from "./pages/Satisfacao.tsx";
+import Incidentes from "./pages/Incidentes.tsx";
+import Metas from "./pages/Metas.tsx";
 import Financeiro from "./pages/Financeiro";
 import Produtos from "./pages/Produtos";
 import Orcamentos from "./pages/Orcamentos";
@@ -14,7 +17,10 @@ type Pagina =
   | "checklists"
   | "orcamentos"
   | "produtos"
-  | "financeiro";
+  | "financeiro"
+  | "satisfacao"
+  | "incidentes"
+  | "metas";
 
 function App() {
   const [pagina, setPagina] = useState<Pagina>("inicio");
@@ -80,6 +86,27 @@ function App() {
           >
             $ Financeiro
           </button>
+
+          <button
+            className={pagina === "satisfacao" ? "ativo" : ""}
+            onClick={() => setPagina("satisfacao")}
+          >
+            ★ Pesquisa de Satisfação
+          </button>
+
+          <button
+            className={pagina === "incidentes" ? "ativo" : ""}
+            onClick={() => setPagina("incidentes")}
+          >
+            ⚠ Incidentes Operacionais
+          </button>
+
+          <button
+            className={pagina === "metas" ? "ativo" : ""}
+            onClick={() => setPagina("metas")}
+          >
+            ◎ Metas por Etapa
+          </button>
         </nav>
 
         <div className="sidebar-rodape">
@@ -99,7 +126,10 @@ function App() {
               {pagina === "checklists" && "Checklists de Qualidade"}
               {pagina === "orcamentos" && "Emissor de Orçamentos"}
               {pagina === "produtos" && "Gerenciamento de Produtos"}
-              {pagina === "financeiro" && "Controle Financeiro"}
+              {pagina === "financeiro" && "Controle Financeiro"}        
+              {pagina === "satisfacao" && "Pesquisa de Satisfação"}
+              {pagina === "incidentes" && "Gestão de Incidentes"}
+              {pagina === "metas" && "Acompanhamento de Metas"}
             </h1>
           </div>
 
@@ -167,6 +197,9 @@ function App() {
         {pagina === "financeiro" && (
           <Financeiro key={pagina} />
         )}
+        {pagina === "satisfacao" && <Satisfacao />}
+        {pagina === "incidentes" && <Incidentes />}
+        {pagina === "metas" && <Metas />}
       </main>
     </div>
   );
